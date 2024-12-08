@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-EditorsFavourite.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Unreal\Projects\Botanibots\BotanibotsGame\Intermediate\Build\Win64\x64\BotanibotsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"D:\Unreal\Projects\Botanibots\BotanibotsGame\Plugins\Editor\EditorsFavourite\Intermediate\Build\Win64\x64\UnrealEditor\Development\EditorsFavourite\EditorsFavouriteModule.cpp.obj"
+"D:\Unreal\Projects\Botanibots\BotanibotsGame\Plugins\Editor\EditorsFavourite\Intermediate\Build\Win64\x64\UnrealEditor\Development\EditorsFavourite\EditorsFavouriteSettings.cpp.obj"
+"D:\Unreal\Projects\Botanibots\BotanibotsGame\Plugins\Editor\EditorsFavourite\Intermediate\Build\Win64\x64\UnrealEditor\Development\EditorsFavourite\EditorsFavourite.init.gen.cpp.obj"
+"D:\Unreal\Projects\Botanibots\BotanibotsGame\Plugins\Editor\EditorsFavourite\Intermediate\Build\Win64\x64\UnrealEditor\Development\EditorsFavourite\EditorsFavouriteSettings.gen.cpp.obj"
+"D:\Unreal\Projects\Botanibots\BotanibotsGame\Plugins\Editor\EditorsFavourite\Intermediate\Build\Win64\x64\UnrealEditor\Development\EditorsFavourite\Default.rc2.res"
+/OUT:"D:\Unreal\Projects\Botanibots\BotanibotsGame\Plugins\Editor\EditorsFavourite\Intermediate\Build\Win64\x64\UnrealEditor\Development\EditorsFavourite\UnrealEditor-EditorsFavourite.lib"

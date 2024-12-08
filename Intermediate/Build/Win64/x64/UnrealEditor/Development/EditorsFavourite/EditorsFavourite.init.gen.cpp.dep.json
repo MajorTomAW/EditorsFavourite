@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unreal\\projects\\botanibots\\botanibotsgame\\plugins\\editor\\editorsfavourite\\intermediate\\build\\win64\\unrealeditor\\inc\\editorsfavourite\\uht\\editorsfavourite.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unreal\\projects\\botanibots\\botanibotsgame\\intermediate\\build\\win64\\x64\\botanibotseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\unreal\\projects\\botanibots\\botanibotsgame\\plugins\\editor\\editorsfavourite\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\editorsfavourite\\definitions.editorsfavourite.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
