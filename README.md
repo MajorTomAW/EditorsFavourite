@@ -17,7 +17,7 @@ Settings             |  Content Browser
 <hr>  
 
 ## Blueprint Class Picker  
-In the ``Blueprint Class Pciker`` Category you can modify the list of common classes that are displayed when creating a new Blueprint.
+In the ``Blueprint Class Picker`` Category you can modify the list of common classes that are displayed when creating a new Blueprint.
 
 Settings             |  Blueprint Class Picker
 :-------------------------:|:-------------------------:
