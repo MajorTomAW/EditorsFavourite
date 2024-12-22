@@ -12,6 +12,7 @@ public class EditorsFavourite : ModuleRules
 			new string[]
 			{
 				"Core",
+				"InputCore",
 				"DeveloperSettings",
 			});
 			
@@ -29,6 +30,7 @@ public class EditorsFavourite : ModuleRules
 				"UnrealEd",
 				"ToolMenus",
 				"Projects",
+				"MainFrame",
 			});
 	}
 }

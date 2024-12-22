@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include "EditorsFavouriteModule.h"
+
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
 #include "AssetViewUtils.h"
@@ -9,14 +11,17 @@
 #include "ContentBrowserModule.h"
 #include "ContentBrowserDataSubsystem.h"
 #include "IContentBrowserDataModule.h"
+#include "Commands/EditorsFavouriteCommands.h"
 
 #include "Interfaces/IPluginManager.h"
+#include "Interfaces/IMainFrameModule.h"
 
 #include "Settings/EditorsFavouriteSettings.h"
+#include "Toolbar/EditorsFavouriteLevelEditorToolbar.h"
 
 #define LOCTEXT_NAMESPACE "EditorsFavourite"
 
-class FEditorsFavouriteModule final : public IModuleInterface
+class FEditorsFavouriteModule final : public IEditorsFavouriteModule
 {
 public:
     //~ Begin IModuleInterface
@@ -24,6 +29,8 @@ public:
     virtual void ShutdownModule() override;
     //~ End IModuleInterface
 
+    virtual TSharedPtr<FUICommandList> GetCommandList() const override { return CommandList; }
+    
 private:
     /** Called right after the engine is initialized. */
     void OnEngineInit();
@@ -33,6 +40,12 @@ private:
 
     void OnRequestUpdate(UEditorsFavouriteSettings* SettingsObject);
     void OnItemDataUpdated(TArrayView<const FContentBrowserItemDataUpdate> DataUpdates);
+
+    void RestartApplication() const;
+    void ExitApplication() const;
+
+private:
+    TSharedPtr<FUICommandList> CommandList;
 };
 IMPLEMENT_MODULE(FEditorsFavouriteModule, EditorsFavourite)
 typedef TMap<FString, TArray<FString>> FFolderDirMap;
@@ -146,6 +159,8 @@ void FEditorsFavouriteModule::ShutdownModule()
 {
     FCoreDelegates::OnEnginePreExit.RemoveAll(this);
     FCoreDelegates::OnPostEngineInit.RemoveAll(this);
+
+    FEditorsFavouriteCommands::Unregister();
 }
 
 void FEditorsFavouriteModule::OnEngineInit()
@@ -161,6 +176,41 @@ void FEditorsFavouriteModule::OnEngineInit()
     {
         ContentBrowserDataModule->GetSubsystem()->OnItemDataUpdated().AddRaw(this, &FEditorsFavouriteModule::OnItemDataUpdated);
     }
+
+    // Commands
+    FEditorsFavouriteCommands::Register();
+    CommandList = MakeShareable(new FUICommandList);
+
+    CommandList->MapAction
+    (
+        FEditorsFavouriteCommands::Get().RestartEditor,
+        FExecuteAction::CreateRaw(this, &FEditorsFavouriteModule::RestartApplication),
+        FCanExecuteAction()
+    );
+
+    CommandList->MapAction
+    (
+        FEditorsFavouriteCommands::Get().ExitEditor,
+        FExecuteAction::CreateRaw(this, &FEditorsFavouriteModule::ExitApplication),
+        FCanExecuteAction()
+    );
+
+    // Let the main frame module know about our commands
+    IMainFrameModule& MainFrame = FModuleManager::Get().LoadModuleChecked<IMainFrameModule>("MainFrame");
+    MainFrame.GetMainFrameCommandBindings()->Append(CommandList.ToSharedRef());
+
+    FEditorsFavouriteLevelEditorToolbar::RegisterToolBar(CommandList);
+}
+
+void FEditorsFavouriteModule::RestartApplication() const
+{
+    FUnrealEdMisc::Get().RestartEditor(false);
+}
+
+void FEditorsFavouriteModule::ExitApplication() const
+{
+    FSlateApplication::Get().LeaveDebuggingMode();
+    GEngine->DeferredCommands.Add(TEXT("CLOSE_SLATE_MAINFRAME"));
 }
 
 void FEditorsFavouriteModule::OnEnginePreExit()
