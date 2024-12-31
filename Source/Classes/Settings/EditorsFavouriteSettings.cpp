@@ -20,6 +20,7 @@ UEditorsFavouriteSettings::UEditorsFavouriteSettings()
 	: bLiveUpdateFolderColors(true)
 	, bClearBlacklistedFolderColors(false)
 	, bColorizePluginFolders(true)
+	, bOverrideBlueprintClassPicker(false)
 {
 	SectionName = FName(TEXT("EditorsFavourite"));
 
@@ -79,6 +80,13 @@ void UEditorsFavouriteSettings::SaveEditorsFavouriteConfig(bool bSaveGlobal)
 	FString DefaultEditorIni = FPaths::SourceConfigDir() / TEXT("DefaultEditor.ini");
 	DefaultEditorIni = FConfigCacheIni::NormalizeConfigIniPath(DefaultEditorIni);
 	MutableThis->SaveConfig(CPF_Config, *DefaultEditorIni);
+
+
+	// Save Common Classes if Blueprint Class Picker is overriden
+	if (!MutableThis->bOverrideBlueprintClassPicker)
+	{
+		return;
+	}
 
 	// Save Common Classes
 	TArray<FClassPickerDefaults>& Defaults = GUnrealEd->GetUnrealEdOptions()->NewAssetDefaultClasses;
@@ -144,6 +152,11 @@ bool UEditorsFavouriteSettings::IsFolderInBlacklist(const FString& FolderPath) c
 #if WITH_EDITOR
 void UEditorsFavouriteSettings::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
+	if (PropertyChangedEvent.Property == nullptr)
+	{
+		return;
+	}
+	
 	auto IsSaveImmediately = [](const FProperty* Property)
 	{
 		return Property->HasMetaData("SaveImmediately") ||

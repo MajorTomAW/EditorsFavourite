@@ -161,6 +161,10 @@ protected: // CONTENT BROWSER
 
 
 protected: // BLUEPRINT COMMON CLASSES
+	/** Override the default blueprint class picker */
+	UPROPERTY(EditDefaultsOnly, Category = "Blueprint Class Picker", meta = (SaveImmediately))
+	bool bOverrideBlueprintClassPicker;
+	
 	/** List of classes that are common in the blueprint class dialog */
 	UPROPERTY(EditDefaultsOnly, Category = "Blueprint Class Picker", meta = (SaveImmediately, ShowTreeView = true, AllowAbstract))
 	TSet<FSoftClassPath> CommonClasses;
