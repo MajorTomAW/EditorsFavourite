@@ -58,6 +58,16 @@ void UEditorsFavouriteSettings::PostInitProperties()
 {
 	Super::PostInitProperties();
 
+	if (!bOverrideBlueprintClassPicker)
+	{
+		return;
+	}
+
+	if (!GUnrealEd)
+	{
+		return;
+	}
+
 	FCoreDelegates::OnPostEngineInit.AddLambda([this]()
 	{
 		// Load Common Classes

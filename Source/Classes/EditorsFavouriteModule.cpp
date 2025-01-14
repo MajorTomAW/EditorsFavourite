@@ -151,16 +151,22 @@ namespace UE::EditorsFavourite
 
 void FEditorsFavouriteModule::StartupModule()
 {
-    FCoreDelegates::OnEnginePreExit.AddRaw(this, &FEditorsFavouriteModule::OnEnginePreExit);
-    FCoreDelegates::OnPostEngineInit.AddRaw(this, &FEditorsFavouriteModule::OnEngineInit);
+    if (GIsEditor)
+    {
+        FCoreDelegates::OnEnginePreExit.AddRaw(this, &FEditorsFavouriteModule::OnEnginePreExit);
+        FCoreDelegates::OnPostEngineInit.AddRaw(this, &FEditorsFavouriteModule::OnEngineInit);
+    }
 }
 
 void FEditorsFavouriteModule::ShutdownModule()
 {
-    FCoreDelegates::OnEnginePreExit.RemoveAll(this);
-    FCoreDelegates::OnPostEngineInit.RemoveAll(this);
+    if (GIsEditor)
+    {
+        FCoreDelegates::OnEnginePreExit.RemoveAll(this);
+        FCoreDelegates::OnPostEngineInit.RemoveAll(this);
 
-    FEditorsFavouriteCommands::Unregister();
+        FEditorsFavouriteCommands::Unregister();   
+    }
 }
 
 void FEditorsFavouriteModule::OnEngineInit()
