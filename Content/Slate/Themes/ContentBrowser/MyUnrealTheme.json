@@ -1,0 +1,305 @@
+{
+	"Version": 1,
+	"Id": "BFD91AD640FF9A83A6BB6FB0C94ED671",
+	"DisplayName": "MyUnrealTheme",
+	"Schemes":
+	{
+		"0":
+		{
+			"SchemeColor": "(R=1.000000,G=0.623789,B=0.000000,A=1.000000)",
+			"FolderNames": [
+				"HUD",
+				"Slate",
+				"UI",
+				"UserInterface",
+				"UX"
+			],
+			"ExplicitPaths": []
+		},
+		"1":
+		{
+			"SchemeColor": "(R=0.913099,G=0.274677,B=0.274677,A=1.000000)",
+			"FolderNames": [
+				"Experience",
+				"Experiences",
+				"FrontEnd",
+				"Frontend",
+				"System"
+			],
+			"ExplicitPaths": []
+		},
+		"2":
+		{
+			"SchemeColor": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+			"FolderNames": [
+				"GameFeature",
+				"GameFeatures"
+			],
+			"ExplicitPaths": [
+				"/GameFeatures",
+				"/Plugins/GameFeatures"
+			]
+		},
+		"3":
+		{
+			"SchemeColor": "(R=1.000000,G=0.332452,B=0.000000,A=1.000000)",
+			"FolderNames": [
+				"Levels",
+				"Maps",
+				"Worlds"
+			],
+			"ExplicitPaths": []
+		},
+		"4":
+		{
+			"SchemeColor": "(R=0.048172,G=0.262251,B=0.016807,A=1.000000)",
+			"FolderNames": [
+				"Balance",
+				"Configuration",
+				"CurveTables",
+				"Data",
+				"DataTables"
+			],
+			"ExplicitPaths": []
+		},
+		"5":
+		{
+			"SchemeColor": "(R=0.000000,G=0.116971,B=0.215861,A=1.000000)",
+			"FolderNames": [
+				"Abilities",
+				"Ability",
+				"AbilitySystem",
+				"GameplayAbilities",
+				"GameplayCueNotifies",
+				"GameplayCues"
+			],
+			"ExplicitPaths": []
+		},
+		"6":
+		{
+			"SchemeColor": "(R=0.274677,G=0.520996,B=0.913099,A=1.000000)",
+			"FolderNames": [
+				"Core",
+				"Device",
+				"Devices",
+				"Global"
+			],
+			"ExplicitPaths": [
+				"/Game",
+				"/All",
+				"/All/Plugins",
+				"/All/Plugins/GameFeatures",
+				"/BioGame",
+				"/BioFrontend",
+				"/BioCore"
+			]
+		},
+		"7":
+		{
+			"SchemeColor": "(R=1.000000,G=1.000000,B=0.212231,A=1.000000)",
+			"FolderNames": [
+				"Actions",
+				"Input",
+				"InputActions",
+				"InputMapping",
+				"Mappings"
+			],
+			"ExplicitPaths": []
+		},
+		"8":
+		{
+			"SchemeColor": "(R=0.051269,G=0.527115,B=0.051269,A=1.000000)",
+			"FolderNames": [
+				"Material",
+				"MaterialCollections",
+				"MaterialFunctions",
+				"MaterialInterfaces",
+				"MaterialParameters",
+				"Materials"
+			],
+			"ExplicitPaths": []
+		},
+		"9":
+		{
+			"SchemeColor": "(R=0.300000,G=0.300000,B=0.300000,A=1.000000)",
+			"FolderNames": [
+				"Developer",
+				"Editor",
+				"EditorOnly",
+				"NeverCook",
+				"NotInFinalPackage",
+				"UncookedOnly"
+			],
+			"ExplicitPaths": []
+		},
+		"10":
+		{
+			"SchemeColor": "(R=0.527115,G=0.051269,B=0.051269,A=1.000000)",
+			"FolderNames": [
+				"2dAssets",
+				"Icons",
+				"Images",
+				"Splash",
+				"Tex",
+				"Textures"
+			],
+			"ExplicitPaths": []
+		},
+		"11":
+		{
+			"SchemeColor": "(R=0.019382,G=0.116971,B=0.012983,A=1.000000)",
+			"FolderNames": [
+				"Equipment",
+				"Inventory",
+				"Itemization",
+				"Items",
+				"InventoryCore"
+			],
+			"ExplicitPaths": [
+				"/All/Plugins/GameFeatures/Itemization"
+			]
+		},
+		"12":
+		{
+			"SchemeColor": "(R=0.119538,G=0.090842,B=0.658375,A=1.000000)",
+			"FolderNames": [
+				"Audio",
+				"Cues",
+				"Sound",
+				"Sounds",
+				"SoundWaves"
+			],
+			"ExplicitPaths": []
+		},
+		"13":
+		{
+			"SchemeColor": "(R=0.000304,G=0.590619,B=0.973446,A=1.000000)",
+			"FolderNames": [
+				"Effects",
+				"FX",
+				"Niagara",
+				"Particles",
+				"VFX"
+			],
+			"ExplicitPaths": []
+		},
+		"14":
+		{
+			"SchemeColor": "(R=0.000000,G=1.000000,B=1.000000,A=1.000000)",
+			"FolderNames": [
+				"Meshes",
+				"Models",
+				"Props"
+			],
+			"ExplicitPaths": []
+		},
+		"15":
+		{
+			"SchemeColor": "(R=0.049707,G=0.208637,B=1.000000,A=1.000000)",
+			"FolderNames": [
+				"BluePrints",
+				"Blueprints",
+				"Macros"
+			],
+			"ExplicitPaths": []
+		},
+		"16":
+		{
+			"SchemeColor": "(R=0.194444,G=0.068712,B=0.021835,A=1.000000)",
+			"FolderNames": [
+				"Weapons"
+			],
+			"ExplicitPaths": []
+		},
+		"17":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"18":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"19":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"20":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"21":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"22":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"23":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"24":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"25":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"26":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"27":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"28":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"29":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"30":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		},
+		"31":
+		{
+			"SchemeColor": "(R=0.000000,G=0.000000,B=0.000000,A=0.000000)",
+			"FolderNames": [],
+			"ExplicitPaths": []
+		}
+	}
+}
