@@ -14,7 +14,7 @@ Settings             |  Content Browser
 
 
 
-<hr>  
+<!--<hr>   TEMPORARILY DISABLED AS ITS NOT WORKING PROPERLY AND IM TOO LAZY TO FIX IT
 
 ## Blueprint Class Picker  
 In the ``Blueprint Class Picker`` Category you can modify the list of common classes that are displayed when creating a new Blueprint.
@@ -24,7 +24,7 @@ Settings             |  Blueprint Class Picker
 <img src="https://github.com/user-attachments/assets/47bd8ef8-3cd4-4543-8291-fee5bcfad481" with="100%" alt="Editor Settings"> | <img src="https://github.com/user-attachments/assets/7815a88f-2f07-4e63-872c-6abc26f09c94" width="100%" alt="Blueprint Class Picker Preview"/>
 
 
-<hr>
+<hr> -->
 
 ## Quick Shutdown / Restart  
 Simple Button that adds the option to shutdown or restart the Unreal Editor.  
